@@ -1,7 +1,7 @@
 # Maintainer: Andreas Radke <andyrtr@archlinux.org>
 
 pkgname=libinput-patched
-pkgver=1.21.0
+pkgver=1.22.0
 pkgrel=2
 pkgdesc="Input device management and event handling library"
 url="https://gitlab.freedesktop.org/libinput"
