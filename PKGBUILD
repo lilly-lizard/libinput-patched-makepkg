@@ -14,12 +14,12 @@ checkdepends=('python-pytest')
 optdepends=('gtk4: libinput debug-gui'
             'python-pyudev: libinput measure'
             'python-libevdev: libinput measure')
-source=(https://gitlab.freedesktop.org/libinput/libinput/-/archive/$pkgver/$pkgname-$pkgver.tar.bz2)
+source=(https://gitlab.freedesktop.org/libinput/libinput/-/archive/$pkgver/libinput-$pkgver.tar.bz2)
 sha256sums=('fad7011705a21f500229199f789f3e3e794b4c9826b70073745cdaec23bc1d0b')
 #validpgpkeys=('3C2C43D9447D5938EF4551EBE23B7E70B467F0BF') # Peter Hutterer (Who-T) <office@who-t.net>
 
 build() {
-  arch-meson $pkgname-$pkgver build \
+  arch-meson libinput-$pkgver build \
     -D udev-dir=/usr/lib/udev \
     -D documentation=false
 
@@ -36,6 +36,6 @@ check() {
 package() {
   meson install -C build --destdir "$pkgdir"
 
-  install -Dvm644 $pkgname-$pkgver/COPYING \
-    "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dvm644 libinput-$pkgver/COPYING \
+    "$pkgdir/usr/share/licenses/libinput/LICENSE"
 }
