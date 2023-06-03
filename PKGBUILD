@@ -8,6 +8,8 @@ url="https://gitlab.freedesktop.org/libinput"
 arch=(x86_64)
 license=(custom:X11)
 depends=('mtdev' 'systemd' 'libevdev' 'libwacom')
+provides=('libinput')
+conflicts=('libinput')
 # upstream doesn't recommend building docs
 makedepends=('gtk4' 'meson' 'wayland-protocols' 'check') # 'doxygen' 'graphviz' 'python-sphinx' 'python-recommonmark'
 checkdepends=('python-pytest')
