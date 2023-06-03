@@ -1,6 +1,6 @@
 # Maintainer: Andreas Radke <andyrtr@archlinux.org>
 
-pkgname=libinput
+pkgname=libinput-patched
 pkgver=1.23.0
 pkgrel=1
 pkgdesc="Input device management and event handling library"
