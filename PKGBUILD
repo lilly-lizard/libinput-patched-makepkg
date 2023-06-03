@@ -41,3 +41,8 @@ package() {
   install -Dvm644 libinput-$pkgver/COPYING \
     "$pkgdir/usr/share/licenses/libinput/LICENSE"
 }
+
+prepare() {
+  patch --directory="libinput-$pkgver" --forward --strip=2 --input="${srcdir}/../libinput_draglock_timeout.patch"
+}
+
